@@ -7,13 +7,13 @@
 
   <p class="subtitle">Una selección de proyectos personales, profesionales y académicos.</p>
 
-  <div class="filters">
+  <!-- <div class="filters">
     @for (category of categories(); track category) {
       <button (click)="selectCategory(category)" [class.active]="selectedCategory() === category">
         {{ category }}
       </button>
     }
-  </div>
+  </div> -->
 
   <div class="projects-container">
     @for (project of projects(); track project.id) {
