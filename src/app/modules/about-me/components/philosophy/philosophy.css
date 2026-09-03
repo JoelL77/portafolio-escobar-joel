@@ -1,0 +1,79 @@
+.quote{
+
+    position:relative;
+
+    background:#1b1b1b;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    margin: 10px 0;
+
+    text-align:center;
+
+}
+
+
+.title-line{
+    width:60px;
+    height:3px;
+    background:#00d9ff;
+    margin:10px 0 0 0px;
+}
+
+.quote p{
+
+    margin:0;
+
+    color:#d5d5d5;
+
+    font-size:1.15rem;
+
+    font-style:italic;
+
+    line-height:1.6;
+
+}
+
+.quote .pi-quote-left{
+
+    position:absolute;
+
+    /* left:20px; */
+
+    /* top:18px; */
+
+    color:#00d9ff;
+
+}
+
+.quote .pi-quote-right{
+
+    position:absolute;
+
+    /* right:20px; */
+
+    /* bottom:18px; */
+
+    color:#00d9ff;
+
+}
+
+.philosophy-card{
+
+    display:flex;
+
+    gap:18px;
+
+    background:#1b1b1b;
+
+    border-left:4px solid #00d9ff;
+
+    border-radius:10px;
+
+    padding:9px;
+
+    margin-bottom:16px;
+
+}

@@ -1,0 +1,48 @@
+<div class="container-fluid m-0 p-0">
+
+<header class="navbar">
+
+<a
+  class="logo"
+  href="/documents/Joel-Escobar-CV.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Descargar CV"
+>
+  JOEL DEV
+
+  <i class="pi pi-download"></i>
+</a>
+
+    <button
+        class="menu-btn"
+        (click)="menuOpen = !menuOpen">
+
+        <i class="pi"
+           [class.pi-bars]="!menuOpen"
+           [class.pi-times]="menuOpen">
+        </i>
+
+    </button>
+
+    <nav [class.open]="menuOpen">
+
+        <a routerLink="/inicio">Inicio</a>
+
+        <a routerLink="/sobre-mi">Sobre mí</a>
+
+        <a routerLink="/proyectos">Proyectos</a>
+
+        <a routerLink="/habilidades">Habilidades</a>
+
+        <a routerLink="/contacto">Contacto</a>
+
+    </nav>
+
+</header>
+  <div class="row m-0 p-0">
+    <div class="col m-0 p-0">
+      <app-main></app-main>
+    </div>
+  </div>
+</div>

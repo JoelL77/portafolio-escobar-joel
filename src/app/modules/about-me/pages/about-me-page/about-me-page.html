@@ -1,0 +1,42 @@
+<section class="about">
+  <div class="section-title">
+    <h2>SOBRE MÍ</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="tabs">
+    <button (click)="changeTab('basic')" [class.active]="currentTab() === 'basic'">
+      Información Básica
+    </button>
+
+    <button (click)="changeTab('biography')" [class.active]="currentTab() === 'biography'">
+      Biografía
+    </button>
+
+    <button (click)="changeTab('philosophy')" [class.active]="currentTab() === 'philosophy'">
+      Filosofía
+    </button>
+
+    <button (click)="changeTab('education')" [class.active]="currentTab() === 'education'">
+      Educación
+    </button>
+
+    <button
+      (click)="changeTab('work-experience')"
+      [class.active]="currentTab() === 'work-experience'"
+    >
+      Experiencia
+    </button>
+
+    <button
+      (click)="changeTab('certifications')"
+      [class.active]="currentTab() === 'certifications'"
+    >
+      Certificaciones
+    </button>
+  </div>
+
+  <div class="about-card">
+    <app-about-tabs [currentTab]="currentTab()"> </app-about-tabs>
+  </div>
+</section>

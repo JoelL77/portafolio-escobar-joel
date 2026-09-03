@@ -1,0 +1,166 @@
+/* ===========================
+   GRID + SCROLL
+=========================== */
+
+.title-line{
+
+    width:70px;
+
+    height:3px;
+
+    background:#00d9ff;
+
+    margin:12px 0 35px;
+
+}
+
+.certifications-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    height:400px;
+    overflow-y:auto;
+    padding-right:10px;
+}
+
+.certifications-grid::-webkit-scrollbar{
+    width:8px;
+}
+
+.certifications-grid::-webkit-scrollbar-thumb{
+    background:#00d9ff;
+    border-radius:20px;
+}
+
+.certifications-grid::-webkit-scrollbar-track{
+    background:#181818;
+}
+
+/* ===========================
+   TARJETA
+=========================== */
+
+.cert-card{
+    background:#1b1b1b;
+    border-left:4px solid #00d9ff;
+    border-radius:10px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:160px;
+    transition:.25s;
+}
+
+.cert-card:hover{
+    transform:translateY(-3px);
+    background:#202020;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.card-info{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-wrapper{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    background:#111;
+    border:1px solid rgba(255,255,255,.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04),
+        0 0 10px rgba(0,217,255,.06);
+}
+
+.logo-wrapper i{
+    font-size:2rem;
+}
+
+/* ===========================
+   TEXTOS
+=========================== */
+
+.card-info h3{
+    margin:0;
+    color:white;
+    font-size:1.05rem;
+    line-height:1.3;
+}
+
+.organization{
+    margin:6px 0 0;
+    color:#d3d3d3;
+    font-size:.95rem;
+}
+
+/* ===========================
+   AÑO
+=========================== */
+
+.year{
+    background:#00d9ff;
+    color:#111;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:.8rem;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+.cert-link{
+    margin-top:22px;
+    color:#00d9ff;
+    text-decoration:none;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:.2s;
+}
+
+.cert-link:hover{
+    color:white;
+    transform:translateX(3px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+    .certifications-grid{
+        grid-template-columns:1fr;
+        height:auto;
+        max-height:420px;
+        overflow-y:auto;
+        padding-right:6px;
+    }
+
+}
+

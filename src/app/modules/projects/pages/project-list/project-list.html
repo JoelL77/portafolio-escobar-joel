@@ -1,0 +1,31 @@
+<section class="projects">
+  <div class="section-title">
+    <h2>PROYECTOS</h2>
+
+    <div class="line"></div>
+  </div>
+
+  <p class="subtitle">Una selección de proyectos personales, profesionales y académicos.</p>
+
+  <div class="filters">
+    @for (category of categories(); track category) {
+      <button (click)="selectCategory(category)" [class.active]="selectedCategory() === category">
+        {{ category }}
+      </button>
+    }
+  </div>
+
+  <div class="projects-container">
+    @for (project of projects(); track project.id) {
+      <app-project-card [project]="project" (open)="openProject($event)"> </app-project-card>
+    }
+  </div>
+
+  <app-project-dialog 
+
+    [visible]="dialogVisible()"
+    [project]="selectedProject()"
+    (close)="closeDialog()"
+  >
+  </app-project-dialog>
+</section>

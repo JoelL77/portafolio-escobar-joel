@@ -1,0 +1,47 @@
+<h2>Certificaciones</h2>
+
+<div class="title-line"></div>
+
+<div class="certifications-grid">
+
+  @for(cert of certifications(); track cert.title){
+
+    <div class="cert-card mb-2">
+
+      <div class="card-header">
+
+        <div class="card-info">
+
+          <div class="logo-wrapper">
+            <i [class]="cert.logo"></i>
+          </div>
+
+          <div>
+            <h3>{{ cert.title }}</h3>
+            <p class="organization">{{ cert.organization }}</p>
+          </div>
+
+        </div>
+
+        <span class="year">
+          {{ cert.year }}
+        </span>
+
+      </div>
+
+      @if(cert.url){
+        <a [href]="cert.url"
+           target="_blank"
+           class="cert-link">
+
+          Ver certificado
+
+          <i class="pi pi-arrow-right"></i>
+        </a>
+      }
+
+    </div>
+
+  }
+
+</div>

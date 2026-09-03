@@ -1,0 +1,333 @@
+.about {
+  /* position: absolute; */
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 120px 0;
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+
+  z-index: 20;
+}
+
+.about-card {
+  width: min(1200px, 95%);
+
+  margin-top: 30px;
+
+  padding: 35px;
+
+  background: #111;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.bottom {
+  width: 100%;
+}
+
+.section-title {
+  width: min(1200px, 95%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+.section-title h2 {
+  margin: 0;
+
+  color: #d8d8d8;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.line {
+  width: 120px;
+
+  height: 2px;
+
+  background: #00d9ff;
+}
+
+.about-card {
+  width: 1200px;
+
+  background: #111;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.about-card {
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(255, 255, 255, 0.03);
+}
+
+.top {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.left-panel {
+  flex: 0 0 30%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-right: 2px solid rgba(0, 217, 255, 0.25);
+
+  box-shadow: inset -2px 0 15px rgba(0, 217, 255, 0.15);
+}
+
+.profile-image img {
+  /* width:100%; */
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.35s ease;
+}
+
+.left-panel:hover img {
+  transform: scale(1.02);
+}
+
+.left-panel::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 45%);
+
+  pointer-events: none;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 35px;
+  overflow: visible;
+  background: transparent;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  padding: 25px;
+}
+
+.about-card {
+  width: min(1200px, 95%);
+}
+
+.section-title {
+  width: min(1200px, 95%);
+}
+
+.profile-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.profile-image img {
+  object-fit: cover;
+}
+
+.profile-image img {
+  border: 3px solid #00d9ff;
+
+  box-shadow:
+    0 0 20px rgba(0, 217, 255, 0.35),
+    0 0 50px rgba(0, 217, 255, 0.15);
+}
+
+.profile-info {
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.profile-info h2 {
+  color: white;
+
+  margin: 0;
+
+  font-size: 2rem;
+}
+
+.profile-info h4 {
+  color: #00d9ff;
+
+  margin-top: 8px;
+
+  font-weight: 500;
+}
+
+.separator {
+  border: none;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  margin: 25px 0;
+}
+
+.tech-stack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 20px;
+}
+
+.tech-stack span {
+  background: #202020;
+
+  color: #00d9ff;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(0, 217, 255, 0.35);
+
+  font-size: 0.9rem;
+}
+
+.contact-info {
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+.contact-info p {
+  color: #d8d8d8;
+
+  margin: 8px 0;
+}
+
+.tabs {
+  width: min(1200px, 95%);
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.tabs button {
+  padding: 14px 22px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: #171717;
+
+  color: #d7d7d7;
+
+  transition: 0.25s;
+}
+
+.tabs button:hover {
+  border-color: #00d9ff;
+
+  color: white;
+}
+
+.tabs button.active{
+
+    background:#00d9ff;
+
+    color:#111;
+
+}
+
+@media (max-width: 768px) {
+  .about {
+    position: absolute;
+
+    inset: 0;
+
+    justify-content: flex-start;
+
+    padding: 110px 15px 40px;
+
+    min-height: auto;
+  }
+
+  .about-card {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    overflow: visible;
+  }
+
+  .right-panel {
+    width: 100%;
+
+    padding: 25px 20px;
+  }
+
+  .tabs {
+    gap: 10px;
+  }
+
+  .tabs button {
+    flex: 1 1 calc(50% - 10px);
+
+    min-width: 140px;
+
+    padding: 12px;
+
+    font-size: 0.9rem;
+  }
+}

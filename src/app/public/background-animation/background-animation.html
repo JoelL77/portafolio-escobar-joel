@@ -1,0 +1,17 @@
+<section class="hero">
+  <div class="background">
+    @for (icon of icons(); track $index) {
+      <i
+        [class]="icon.icon + ' floating'"
+        [style.left.%]="icon.left"
+        [style.fontSize.px]="icon.size"
+        [style.opacity]="icon.opacity"
+        [style.animationDuration.s]="icon.duration"
+        [style.animationDelay.s]="-icon.delay"
+        [class.up]="icon.direction === 'up'"
+        [class.down]="icon.direction === 'down'"
+      >
+      </i>
+    }
+  </div>
+</section>

@@ -1,0 +1,157 @@
+.title-line{
+
+    width:70px;
+
+    height:3px;
+
+    background:#00d9ff;
+
+    margin:12px 0 35px;
+
+}
+
+.education-scroll{
+
+    height:400px;
+
+    overflow-y:auto;
+
+    padding-right:15px;
+
+}
+
+.education-scroll::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.education-scroll::-webkit-scrollbar-thumb{
+
+    background:#00d9ff;
+
+    border-radius:20px;
+
+}
+
+.education-scroll::-webkit-scrollbar-track{
+
+    background:#181818;
+
+}
+
+.education-item{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.timeline{
+
+    width:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.circle{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    border:3px solid #00d9ff;
+
+    background:#111;
+
+    box-shadow:0 0 10px rgba(0,217,255,.45);
+
+}
+
+.line{
+
+    flex:1;
+
+    width:2px;
+
+    background:#00d9ff;
+
+    margin-top:5px;
+
+}
+
+.education-card{
+
+    flex:1;
+
+    background:#1b1b1b;
+
+    border-left:4px solid #00d9ff;
+
+    border-radius:10px;
+
+    padding:18px 22px;
+
+    transition:.3s;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-3px);
+
+    background:#202020;
+
+}
+
+.education-card h3{
+
+    margin:0;
+
+    color:white;
+
+    font-size:1.25rem;
+
+}
+
+.education-card h4{
+
+    margin:8px 0;
+
+    color:#d0d0d0;
+
+    font-weight:500;
+
+}
+
+.period{
+
+    display:inline-block;
+
+    margin-right:12px;
+
+    color:#00d9ff;
+
+    font-weight:600;
+
+}
+
+.education-card p{
+
+    margin-top:15px;
+
+    color:#d2d2d2;
+
+    line-height:1.6;
+
+}

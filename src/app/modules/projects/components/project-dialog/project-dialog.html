@@ -1,0 +1,55 @@
+<p-dialog
+  [header]="project()!.title"
+  [visible]="visible()"
+  [modal]="true"
+  [draggable]="false"
+  [resizable]="false"
+  [closable]="true"
+  [style]="{
+    width: '500px',
+
+    maxWidth: '95vw',
+  }"
+  (onHide)="close.emit()"
+  [baseZIndex]="20000"
+>
+  @if (project()) {
+    <div class="dialog">
+      <!-- <img [src]="project()!.image" [alt]="project()!.title" /> -->
+
+      <div class="info">
+        <!-- <h2> -->
+        <!-- {{ project()!.title }} -->
+        <!-- </h2> -->
+        <span class="type"> Proyecto: {{ project()!.type }} </span>
+
+        <p>
+          {{ project()!.description }}
+        </p>
+
+        <h3>Tecnologías</h3>
+
+        <div class="techs">
+          @for (tech of project()!.technologies; track tech.name) {
+            <div class="tech" [pTooltip]="tech.name" tooltipPosition="top">
+              <i [class]="tech.icon"></i>
+            </div>
+          }
+        </div>
+
+        <div class="buttons">
+          @if (project()?.demo) {
+            <button pButton label="Demo" icon="pi pi-play" severity="info"></button>
+          }
+          <button
+            pButton
+            label="Ver detalles completos"
+            icon="pi pi-arrow-right"
+            severity="contrast"
+            (click)="goToProject()"
+          ></button>
+        </div>
+      </div>
+    </div>
+  }
+</p-dialog>

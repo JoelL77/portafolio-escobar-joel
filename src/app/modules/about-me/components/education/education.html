@@ -1,0 +1,49 @@
+<h2>Educación</h2>
+
+<div class="title-line"></div>
+
+<div class="education-scroll">
+
+    @for(item of education(); track item.title){
+
+        <div class="education-item">
+
+            <div class="timeline">
+
+                <span class="circle"></span>
+
+                <span class="line"></span>
+
+            </div>
+
+            <div class="education-card">
+
+                <h3>{{item.title}}</h3>
+
+                <h4>{{item.institution}}</h4>
+
+                <span class="period">
+
+                    {{item.period}}
+
+                </span>
+
+                <span class="status">
+
+                    {{item.status}}
+
+                </span>
+
+                <p>
+
+                    {{item.description}}
+
+                </p>
+
+            </div>
+
+        </div>
+
+    }
+
+</div>

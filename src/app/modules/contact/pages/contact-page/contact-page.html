@@ -1,0 +1,112 @@
+<section class="contact">
+  <div class="section-title">
+    <h2 class="mt-3">CONTACTO</h2>
+
+    <div class="line"></div>
+  </div>
+
+  <p class="subtitle">
+    ¿Tenés una propuesta, proyecto o simplemente querés ponerte en contacto? Completá el formulario
+    o escribime directamente.
+  </p>
+
+  <div class="contact-card">
+    <!-- FORMULARIO -->
+
+    <div class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+        <div class="row">
+          <div class="field">
+            <label>Nombre</label>
+
+            <input pInputText type="text" placeholder="Tu nombre" formControlName="name" />
+          </div>
+
+          <div class="field">
+            <label>Correo electrónico</label>
+
+            <input
+              pInputText
+              type="email"
+              placeholder="correo@ejemplo.com"
+              formControlName="email"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Asunto</label>
+
+            <input pInputText type="text" placeholder="Asunto" formControlName="subject" />
+          </div>
+
+          <div class="field">
+            <label>Teléfono</label>
+
+            <input pInputText type="text" placeholder="+54 9 ..." formControlName="phone" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Mensaje</label>
+
+          <textarea
+            pInputTextarea
+            rows="7"
+            placeholder="Escribí tu mensaje..."
+            formControlName="message"
+          >
+          </textarea>
+        </div>
+
+        <button
+          pButton
+          type="submit"
+          label="Enviar mensaje"
+          icon="pi pi-send"
+          [label]="sending() ? 'Enviando...' : 'Enviar mensaje'"
+          [disabled]="contactForm.invalid"
+        ></button>
+      </form>
+    </div>
+
+    <!-- INFORMACIÓN -->
+
+    <div class="contact-info">
+      <a class="info-card" href="mailto:tuemail@gmail.com?subject=Contacto desde Portfolio">
+        <i class="pi pi-envelope"></i>
+
+        <h3>Email</h3>
+
+        <span>joellasalas77@gmail.com</span>
+      </a>
+
+      <a
+        class="info-card"
+        href="https://api.whatsapp.com/send?phone=541133723907"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="pi pi-whatsapp"></i>
+
+        <h3>WhatsApp</h3>
+
+        <span>+54 11 3372-3907</span>
+      </a>
+
+      <a
+        class="info-card"
+        href="https://maps.google.com/?q=Zona+Oeste,+Buenos+Aires"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="pi pi-map-marker"></i>
+
+        <h3>Ubicación</h3>
+
+        <span>Zona Oeste, Buenos Aires</span>
+      </a>
+    </div>
+  </div>
+</section>

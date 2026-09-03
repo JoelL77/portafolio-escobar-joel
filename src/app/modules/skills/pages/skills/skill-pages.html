@@ -1,0 +1,83 @@
+<section class="skills">
+  <div class="section-title">
+    <h2>HABILIDADES</h2>
+    <div class="line"></div>
+  </div>
+
+  <p class="subtitle">
+    Tecnologías, herramientas y competencias que utilizo para crear aplicaciones modernas y
+    escalables.
+  </p>
+
+  <div class="tabs">
+    <button [class.active]="selectedTab() === 'technical'" (click)="selectedTab.set('technical')">
+      Habilidades Técnicas
+    </button>
+
+    <button [class.active]="selectedTab() === 'soft'" (click)="selectedTab.set('soft')">
+      Habilidades Blandas
+    </button>
+  </div>
+
+  @if (selectedTab() === 'technical') {
+    <div class="filters">
+      @for (category of categories; track category) {
+        <button
+          [class.active]="selectedCategory() === category"
+          (click)="selectedCategory.set(category)"
+        >
+          {{ category }}
+        </button>
+      }
+    </div>
+  }
+
+  <div class="skills-content">
+    @if (selectedTab() === 'technical') {
+      <div class="skills-grid">
+        @for (skill of filteredSkills(); track skill.name) {
+          <div class="skill-card">
+            <div class="skill-icon" [pTooltip]="tooltipContent(skill)" tooltipPosition="top">
+              <i [class]="skill.icon"></i>
+            </div>
+
+            <div class="stars">
+              @for (star of [1, 2, 3, 4, 5]; track star) {
+                <i
+                  class="pi"
+                  [class.pi-star-fill]="star <= skill.level"
+                  [class.pi-star]="star > skill.level"
+                >
+                </i>
+              }
+            </div>
+
+            <span class="skill-level">
+              {{ getLevel(skill.level) }}
+            </span>
+          </div>
+        }
+      </div>
+    }
+
+    @if (selectedTab() === 'soft') {
+      <div class="soft-grid">
+        @for (skill of softSkills; track skill.title) {
+          <div class="soft-card">
+            <div class="soft-icon">
+              <i [class]="skill.icon"></i>
+            </div>
+
+            <h3>
+              {{ skill.title }}
+            </h3>
+
+            <p>
+              {{ skill.description }}
+            </p>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

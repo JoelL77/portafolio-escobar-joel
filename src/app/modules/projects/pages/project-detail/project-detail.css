@@ -1,0 +1,692 @@
+.detail{
+
+    width:min(1400px,95%);
+
+    margin:120px auto 80px;
+
+    color:white;
+
+    position:relative;
+
+    z-index:20;
+
+}
+
+.hero{
+
+    position:relative;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    height:420px;
+
+    margin-bottom:35px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.hero img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:50px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.90),
+        rgba(0,0,0,.15)
+    );
+
+}
+
+.overlay h1{
+
+    margin:15px 0 10px;
+
+    font-size:3rem;
+
+    font-weight:800;
+
+}
+
+.overlay p{
+
+    max-width:700px;
+
+    color:#d5d5d5;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+.type{
+
+    width:max-content;
+
+    padding:10px 20px;
+
+    background:#00d9ff;
+
+    color:#111;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+}
+
+.content{
+
+    display:grid;
+
+    grid-template-columns:2.2fr 380px;
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+.card{
+
+    background:#171717;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.card{
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    border-color:#00d9ff33;
+
+}
+
+.card h2{
+
+    margin:0 0 20px;
+
+    font-size:1.5rem;
+
+}
+
+.card p{
+
+    color:#cfcfcf;
+
+    line-height:1.9;
+
+}
+
+.techs{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.tech{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#202020;
+
+    border-radius:12px;
+
+    padding:14px 18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.tech i{
+
+    font-size:2rem;
+
+}
+
+.card ul{
+
+    padding-left:18px;
+
+}
+
+.card li{
+
+    margin-bottom:15px;
+
+    color:#d3d3d3;
+
+}
+
+.double{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+aside{
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+.side-card{
+
+    background:#171717;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.side-card h3{
+
+    margin:0 0 12px;
+
+    color:white;
+
+}
+
+.side-card span{
+
+    color:#00d9ff;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+
+.action{
+
+    width:100%;
+
+    margin-top:12px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.action:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.github{
+
+    background:#222;
+
+    color:white;
+
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+
+    width:100%;
+    aspect-ratio:16 / 9;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.stat{
+
+    background:#181818;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.stat i{
+
+    font-size:1.8rem;
+
+    color:#00d9ff;
+
+}
+
+.stat span{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:#a8a8a8;
+
+}
+
+.stat strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:1.2rem;
+
+}
+
+.sidebar{
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        position:relative;
+
+        top:auto;
+
+    }
+
+}
+.project-info{
+
+    background:#171717;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:28px;
+
+}
+
+.project-info h3{
+
+    margin:0;
+
+    font-size:1.3rem;
+
+}
+
+.separator{
+
+    margin:25px 0;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.info-item{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.info-item i{
+
+    color:#00d9ff;
+
+    font-size:1.5rem;
+
+}
+
+.info-item span{
+
+    display:block;
+
+    color:#9d9d9d;
+
+    font-size:.9rem;
+
+}
+
+.info-item strong{
+
+    color:white;
+
+    font-size:1rem;
+
+    word-break:break-word;
+
+}
+
+.demo{
+
+    background:#00d9ff;
+
+    color:#111;
+
+}
+
+.back{
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    cursor:pointer;
+
+}
+
+/* =====================================
+   RESPONSIVE PROJECT DETAIL
+===================================== */
+
+@media(max-width: 900px){
+
+    .detail{
+
+        width:100%;
+
+        padding:0 15px;
+
+        margin:100px auto 50px;
+
+    }
+
+
+    .hero{
+
+        height:320px;
+
+    }
+
+
+    .overlay{
+
+        padding:25px;
+
+    }
+
+
+    .overlay h1{
+
+        font-size:2rem;
+
+    }
+
+
+    .overlay p{
+
+        font-size:.95rem;
+
+    }
+
+
+    /* STATS */
+
+    .stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+
+    .stat{
+
+        padding:20px;
+
+    }
+
+
+    /* CONTENT */
+
+    .content{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .sidebar{
+
+        position:relative;
+
+        top:auto;
+
+        order:-1;
+
+    }
+
+
+    .project-info{
+
+        padding:20px;
+
+    }
+
+
+    /* DOUBLE */
+
+    .double{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    /* GALLERY */
+
+    .gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+@media(max-width:600px){
+
+    .detail{
+
+        padding:0 10px;
+
+    }
+
+
+    .hero{
+
+        height:260px;
+
+        border-radius:14px;
+
+    }
+
+
+    .overlay{
+
+        padding:20px;
+
+    }
+
+
+    .overlay h1{
+
+        font-size:1.6rem;
+
+    }
+
+
+    .type{
+
+        padding:8px 15px;
+
+        font-size:.85rem;
+
+    }
+
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .card{
+
+        padding:20px;
+
+        border-radius:14px;
+
+    }
+
+
+    .card h2{
+
+        font-size:1.3rem;
+
+    }
+
+
+    .techs{
+
+        gap:10px;
+
+    }
+
+
+    .tech{
+
+        width:100%;
+
+        padding:12px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}

@@ -1,0 +1,33 @@
+<h2>
+
+    Información Básica
+
+</h2>
+
+<div class="title-line"></div>
+
+<div class="cards">
+
+    @for(item of information;track item.title){
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <i [class]="item.icon"></i>
+
+                {{item.title}}
+
+            </div>
+
+            <div class="card-value">
+
+                {{item.value}}
+
+            </div>
+
+        </div>
+
+    }
+
+</div>
